@@ -8,10 +8,13 @@ export class PostgresUserRespository implements IUsersRepository{
 
   
   async findByEmail(email:string): Promise<User>{
-    const user = db("users").where(user => email == email);
-    return user;
+    const userEmail = await db("users").select("email");
+    const userDB = userEmail.find(user => user.email == email);
+    console.log(userDB);
 
-  }
+    return userDTO;
+
+  } 
   async save(user:User):Promise<void>{
     // const trx = await  db.transaction();
     const{name,email,password,id}=user ;

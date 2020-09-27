@@ -9,7 +9,7 @@ export class CreatePizzaController{
   async handleChoosePizza(req:Request, res:Response){
     const{userName,size,flavors,frete} = req.body;
     try{
-      await this.createPizzaUseCase.choosePizza({
+      await this.createPizzaUseCase.transferPizzaData({
         userName,
         size,
         flavors,

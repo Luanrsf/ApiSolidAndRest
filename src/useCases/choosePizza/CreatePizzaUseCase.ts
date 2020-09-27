@@ -7,7 +7,7 @@ export class CreatePizzaUseCase{
   constructor(
     private pizzaRepository :IPizzaRepository
   ){}
-    async choosePizza(data:IPizzaDTO){
+    async transferPizzaData(data:IPizzaDTO){
       await this.pizzaRepository.choosePizza(data);
     }
 
