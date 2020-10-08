@@ -1,7 +1,7 @@
 import { MailtrapMailProvider } from "../../providers/implementations/MailtrapMailProvider";
 import { CreatePizzaController } from "./CreatePizzaController";
 import { CreatePizzaUseCase } from "./CreatePizzaUseCase";
-import {DBPizzaRepository} from "./../../repositories/implementations/DBPizzaRepository";
+import {DBPizzaRepository} from "../../repositories/implementations/DBPizzaRepository";
 
 
 const pizzaRepository = new DBPizzaRepository();

@@ -1,5 +1,5 @@
 
-import {IPizzaRepository} from "./../../repositories/IPizzaRepository";
+import {IPizzaRepository} from "../../repositories/IPizzaRepository";
 import { IPizzaDTO } from "./IPizzaDTO";
 import { Pizza } from "../../entities/Pizza";
 

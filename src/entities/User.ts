@@ -4,7 +4,10 @@ export class User{
   public readonly id: string;
   public name: string;
   public email: string;
+  public telNumber: string;
+  public adress: string;
   public password: string;
+  public pedidosCount: number;
   
  
   constructor(props: Omit<User,"id">, id?:string){

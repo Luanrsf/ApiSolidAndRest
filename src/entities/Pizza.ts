@@ -1,4 +1,4 @@
-import { IPizzaDTO } from "../useCases/choosePizza/IPizzaDTO";
+import { IPizzaDTO } from "../useCases/Order/IPizzaDTO";
 
 
 export class Pizza{

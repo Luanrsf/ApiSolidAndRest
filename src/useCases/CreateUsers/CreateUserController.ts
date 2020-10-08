@@ -5,14 +5,25 @@ export class CreateUserController{
   constructor(
     private createUserUseCase: CreateUserUseCase,
   ){}
- 
-  async handle(req:Request,res:Response):Promise<Response>{
-    const {name,email,password} = req.body;
+  async handleLogin(req:Request,res:Response):Promise<Response>{
+    const {email,password} = req.body;
+    try{
+      await this.createUserUseCase.login({email, password})
+      return res.status(201).send("Login efetuado com sucesso");
+    }
+    catch(err){
+      return res.status(400).send("Usuario ou senha nao encontrado")
+    }
+
+  }
+  async handleRegister(req:Request,res:Response):Promise<Response>{
+    const {name,email,password,telNumber} = req.body;
     try{
     await this.createUserUseCase.execute({
       name,
       email,
-      password
+      password,
+      telNumber
     })
     return res.status(201).send();
   }catch(err){

@@ -1,5 +1,5 @@
 import { db } from "../../database/connection";
-import { IPizzaDTO } from "../../useCases/choosePizza/IPizzaDTO";
+import { IPizzaDTO } from "../../useCases/Order/IPizzaDTO";
 import { IPizzaRepository } from "../IPizzaRepository";
 import {Pizza} from "../../entities/Pizza"
 
